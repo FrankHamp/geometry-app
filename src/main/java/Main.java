@@ -13,7 +13,7 @@ public class Main {
         String shape = scanner.nextLine();
 
         if (shape.equals("circle")) { // refactor til circle klasse
-            Circle.createCircle(calculator, scanner);
+            Circle.createCircle(scanner);
 
         } else if (shape.equals("rectangle")) { // refactor til rectangle klasse
             System.out.println("Enter width:");

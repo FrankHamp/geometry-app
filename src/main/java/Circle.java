@@ -7,7 +7,7 @@ public class Circle {
         this.radius = radius;
     }
 
-    public static void createCircle(ShapeCalculator calculator, Scanner scanner){
+    public static void createCircle(Scanner scanner){
         System.out.println("Enter radius:");
         double radius = scanner.nextDouble();
 
