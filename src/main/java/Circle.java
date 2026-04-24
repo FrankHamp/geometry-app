@@ -11,10 +11,21 @@ public class Circle {
         System.out.println("Enter radius:");
         double radius = scanner.nextDouble();
 
-        double area = calculator.calculateCircleArea(radius);
-        double circumference = calculator.calculateCircleCircumference(radius);
+        Circle circle = new Circle(radius);
+
+        double area = circle.calculateArea(radius);
+        double circumference = circle.calculateCircumference(radius);
 
         System.out.println("Area: " + area);
         System.out.println("Circumference: " + circumference);
     }
+
+    public double calculateArea(double radius) {
+        return Math.PI * radius * radius;
+    }
+
+    public double calculateCircumference(double radius) {
+        return 2 * Math.PI * radius;
+    }
+
 }
