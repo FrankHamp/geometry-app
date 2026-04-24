@@ -1,37 +1,10 @@
 import java.util.Scanner;
-//kode der skal refactors
-public class Main {
-
-    // main skal være mindre
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        ShapeCalculator calculator = new ShapeCalculator();
-
         System.out.println("Choose shape: circle / rectangle");
 
         String shape = scanner.nextLine();
 
-        if (shape.equals("circle")) { // refactor til circle klasse
-            Circle.createCircle(scanner);
-
-        } else if (shape.equals("rectangle")) { // refactor til rectangle klasse
-            System.out.println("Enter width:");
-            double width = scanner.nextDouble();
-
-            System.out.println("Enter height:");
-            double height = scanner.nextDouble();
-
-            double area = calculator.calculateRectangleArea(width, height);
-            double perimeter = calculator.calculateRectanglePerimeter(width, height);
-
-            System.out.println("Area: " + area);
-            System.out.println("Perimeter: " + perimeter);
-
-        } else {
-            System.out.println("Unknown shape");
-        }
-
         scanner.close();
     }
-}
