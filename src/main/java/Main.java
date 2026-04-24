@@ -13,14 +13,7 @@ public class Main {
         String shape = scanner.nextLine();
 
         if (shape.equals("circle")) { // refactor til circle klasse
-            System.out.println("Enter radius:");
-            double radius = scanner.nextDouble();
-
-            double area = calculator.calculateCircleArea(radius);
-            double circumference = calculator.calculateCircleCircumference(radius);
-
-            System.out.println("Area: " + area);
-            System.out.println("Circumference: " + circumference);
+            Circle.createCircle(scanner);
 
         } else if (shape.equals("rectangle")) { // refactor til rectangle klasse
             System.out.println("Enter width:");
