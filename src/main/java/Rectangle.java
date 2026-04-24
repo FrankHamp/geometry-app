@@ -8,12 +8,12 @@ class Rectangle implements Shape {
     }
 
     @Override
-    public double getArea() {
+    public double calculateArea() {
         return length * width;
     }
 
     @Override
-    public double getPerimiter() {
+    public double calculatePerimeter() {
         return 2 * (length + width);
     }
 }
