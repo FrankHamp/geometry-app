@@ -1,10 +1,26 @@
+import java.util.Scanner;
+
 class Rectangle implements Shape {
-    private double length;
-    private double width;
+    double length;
+    double width;
 
     public Rectangle(double length, double width) {
         this.length = length;
         this.width = width;
+    }
+
+    public static void createRectangle(Scanner scanner) {
+        System.out.println("Enter Length:");
+        double length = scanner.nextDouble();
+        double width = scanner.nextDouble();
+
+        Rectangle rectangle = new Rectangle(length, width);
+
+        double area = rectangle.calculateArea();
+        double perimeter = rectangle.calculatePerimeter();
+
+        System.out.println("length: " + length);
+        System.out.println("width: " + width);
     }
 
     @Override
