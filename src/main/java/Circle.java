@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Circle {
+public class Circle implements Shape{
     double radius;
 
     public Circle(double radius){
@@ -13,19 +13,21 @@ public class Circle {
 
         Circle circle = new Circle(radius);
 
-        double area = circle.calculateArea(radius);
-        double circumference = circle.calculateCircumference(radius);
+        double area = circle.calculateArea();
+        double circumference = circle.calculatePerimeter();
 
         System.out.println("Area: " + area);
         System.out.println("Circumference: " + circumference);
     }
 
-    public double calculateArea(double radius) {
-        return Math.PI * radius * radius;
-    }
-
-    public double calculateCircumference(double radius) {
+    @Override
+    public double calculatePerimeter() {
         return 2 * Math.PI * radius;
     }
 
+    @Override
+    public double calculateArea() {
+        return Math.PI * radius * radius;
+
+    }
 }
