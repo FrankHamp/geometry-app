@@ -1,5 +1,7 @@
 public class ShapeCalculator {
 
+    // potentielt opdel i CircleCalculator og RectangleCalculator
+
     public double calculateCircleArea(double radius) {
         return Math.PI * radius * radius;
     }

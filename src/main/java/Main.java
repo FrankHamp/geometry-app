@@ -2,6 +2,8 @@ import java.util.Scanner;
 //kode der skal refactors
 public class Main {
 
+    // main skal være mindre
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         ShapeCalculator calculator = new ShapeCalculator();
@@ -10,7 +12,7 @@ public class Main {
 
         String shape = scanner.nextLine();
 
-        if (shape.equals("circle")) {
+        if (shape.equals("circle")) { // refactor til circle klasse
             System.out.println("Enter radius:");
             double radius = scanner.nextDouble();
 
@@ -20,7 +22,7 @@ public class Main {
             System.out.println("Area: " + area);
             System.out.println("Circumference: " + circumference);
 
-        } else if (shape.equals("rectangle")) {
+        } else if (shape.equals("rectangle")) { // refactor til rectangle klasse
             System.out.println("Enter width:");
             double width = scanner.nextDouble();
 
