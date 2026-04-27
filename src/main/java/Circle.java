@@ -7,14 +7,10 @@ public class Circle implements Shape{
         this.radius = radius;
     }
 
-    public static void createCircle(Scanner scanner){
-        System.out.println("Enter radius:");
-        double radius = scanner.nextDouble();
-
-        Circle circle = new Circle(radius);
-
-        double area = circle.calculateArea();
-        double circumference = circle.calculatePerimeter();
+    @Override
+    public void calculateShape(){
+        double area = calculateArea();
+        double circumference = calculatePerimeter();
 
         System.out.println("Area: " + area);
         System.out.println("Circumference: " + circumference);

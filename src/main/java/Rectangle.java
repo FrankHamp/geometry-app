@@ -9,18 +9,13 @@ class Rectangle implements Shape {
         this.width = width;
     }
 
-    public static void createRectangle(Scanner scanner) {
-        System.out.println("Enter Length:");
-        double length = scanner.nextDouble();
-        double width = scanner.nextDouble();
+    @Override
+    public void calculateShape() {
+        double area = calculateArea();
+        double perimeter = calculatePerimeter();
 
-        Rectangle rectangle = new Rectangle(length, width);
-
-        double area = rectangle.calculateArea();
-        double perimeter = rectangle.calculatePerimeter();
-
-        System.out.println("length: " + length);
-        System.out.println("width: " + width);
+        System.out.println("Area: " + area);
+        System.out.println("Perimeter: " + perimeter);
     }
 
     @Override
